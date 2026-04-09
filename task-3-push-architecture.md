@@ -68,23 +68,34 @@ Notification Service формирует сообщение и отправляе
 
 ## Схема архитектуры
 
+## Схема архитектуры
+
+```text
 [Mobile App]
-    |
-    | регистрирует device token
-    v
+     |
+     | регистрирует device token
+     v
 [API Gateway / BFF]
-    |
-    v
+     |
+     v
 [User/Profile Service] ----> [Device Token Storage]
-    |
-    v
-[Order Service] ----\
-[Cart Service] ------> [Event Bus / Broker] ---> [Notification Service] ---> [FCM / APNs] ---> [Mobile App]
-[Marketing Service] -/               |                    |
-                                     |                    v
-                                     |              [Notification DB]
-                                     v
-                               [Scheduler / Rules Engine]
+                                   |
+                                   v
+                         (user_id → device_token)
+
+--------------------------------------------------
+
+[Order Service] --------\
+[Cart Service] ----------> [Event Bus / Broker] ---> [Notification Service] ---> [FCM / APNs] ---> [Mobile App]
+[Marketing Service] ----/
+
+                          |
+                          v
+                   [Notification DB]
+
+                          |
+                          v
+               [Scheduler / Rules Engine]
                                
 ---
 
