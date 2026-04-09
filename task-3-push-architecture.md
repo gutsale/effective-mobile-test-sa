@@ -96,7 +96,7 @@ Notification Service формирует сообщение и отправляе
                           |
                           v
                [Scheduler / Rules Engine]
-                               
+```                               
 ---
 
 ## Обоснование архитектуры
