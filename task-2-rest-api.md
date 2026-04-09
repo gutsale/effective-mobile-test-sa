@@ -18,6 +18,7 @@ Authorization: Bearer <access_token>
 
 ## Пример ответа
 
+```json
 {
   "data": [
     {
@@ -49,6 +50,7 @@ Authorization: Bearer <access_token>
     "count": 2
   }
 }
+```
 
 ---
 
