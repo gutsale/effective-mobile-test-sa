@@ -70,6 +70,8 @@ Notification Service формирует сообщение и отправляе
 
 ## Схема архитектуры
 
+## Схема архитектуры
+
 ```text
 [Mobile App]
      |
@@ -83,8 +85,6 @@ Notification Service формирует сообщение и отправляе
                                    v
                          (user_id → device_token)
 
---------------------------------------------------
-
 [Order Service] --------\
 [Cart Service] ----------> [Event Bus / Broker] ---> [Notification Service] ---> [FCM / APNs] ---> [Mobile App]
 [Marketing Service] ----/
@@ -96,7 +96,8 @@ Notification Service формирует сообщение и отправляе
                           |
                           v
                [Scheduler / Rules Engine]
-```                               
+```
+
 ---
 
 ## Обоснование архитектуры
