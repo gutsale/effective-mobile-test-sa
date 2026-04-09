@@ -3,6 +3,8 @@
 ## Описание
 API используется для получения списка партнёрских магазинов.
 
+---
+
 ## Пример запроса
 
 ```http
@@ -11,7 +13,10 @@ Host: api.petrushka-green.ru
 Accept: application/json
 Authorization: Bearer <access_token>
 
-## Пример ответа
+---
+
+```md
+## Пример запроса
 
 {
   "data": [
@@ -39,11 +44,8 @@ Authorization: Bearer <access_token>
       },
       "external_url": "https://vkusvill.ru"
     }
-  ]
+  ],
+  "meta": {
+    "count": 2
+  }
 }
-
-## Обоснование
-
-Используется GET-запрос, так как данные только читаются.
-Добавлено поле type для поддержки разных типов доставки.
-Поле external_url используется для перехода на внешний сайт.
