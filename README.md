@@ -1,2 +1,15 @@
-# effective-mobile-test-sa
-Test assignment for Junior System Analyst position
+# Тестовое задание на позицию системного аналитика
+
+Выполнено в рамках отбора на позицию **Junior System Analyst** в компании Effective Mobile.
+
+## Описание
+В данном репозитории представлено решение тестового задания, включающего:
+- анализ требований
+- проектирование REST API
+- построение архитектуры PUSH-уведомлений
+
+## Содержание
+
+- [Задание 1. Анализ требований](./task-1-requirements-analysis.md)
+- [Задание 2. Проектирование API](./task-2-rest-api.md)
+- [Задание 3. Архитектура PUSH-уведомлений](./task-3-push-architecture.md)
